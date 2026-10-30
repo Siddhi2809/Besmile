@@ -23,10 +23,10 @@ export default function Hero() {
   return (
     <section className="relative w-full h-auto min-h-0 sm:min-h-[500px] md:h-[75vh] md:min-h-[460px] md:max-h-[75vh] bg-white overflow-hidden flex flex-col justify-between pt-1 sm:pt-7 md:pt-6 pb-3 sm:pb-3 md:pb-2.5">
       {/* ======================================================== */}
-      {/* BACKGROUND IMAGE LAYER (Both Mobile & Desktop)          */}
+      {/* BACKGROUND IMAGE LAYER (Blurred on Mobile, Sharp Desktop) */}
       {/* Full width 100% edge-to-edge - text written directly on it */}
       {/* ======================================================== */}
-      <div className="absolute inset-0 w-full h-full pointer-events-none select-none z-0">
+      <div className="absolute inset-0 w-full h-full pointer-events-none select-none z-0 overflow-hidden">
         <Image
           src="/images/hero/be-smile-hero.png"
           alt="Be Smile Child Development & Rehabilitation Centre"
@@ -34,12 +34,12 @@ export default function Hero() {
           priority
           unoptimized
           sizes="100vw"
-          className="w-full h-full object-cover object-[80%_30%] sm:object-[76%_center] md:object-[center_20%] lg:object-center select-none"
+          className="w-full h-full object-cover object-[80%_30%] sm:object-[76%_center] md:object-[center_20%] lg:object-center select-none blur-[4px] sm:blur-none scale-105 sm:scale-100 transition-all duration-300"
         />
       </div>
 
-      {/* Mobile-optimized soft gradient feather: keeps text 100% readable while the smiling child & leaves shine through on the right */}
-      <div className="md:hidden absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/20 pointer-events-none z-0" />
+      {/* Mobile-optimized soft glass backdrop feather: keeps text 100% readable with a smooth aesthetic depth */}
+      <div className="md:hidden absolute inset-0 bg-gradient-to-r from-white/90 via-white/75 to-white/30 backdrop-blur-[1.5px] pointer-events-none z-0" />
 
       {/* ======================================================== */}
       {/* LOGO COLOR GRADIENT BLEND (At the bottom of Hero)        */}

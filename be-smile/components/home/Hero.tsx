@@ -21,7 +21,7 @@ const iconMap: Record<string, LucideIcon> = {
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-auto min-h-0 sm:min-h-[500px] md:h-[75vh] md:min-h-[460px] md:max-h-[75vh] bg-white overflow-hidden flex flex-col justify-between pt-1 sm:pt-7 md:pt-6 pb-3 sm:pb-3 md:pb-2.5">
+    <section className="relative w-full h-auto min-h-0 sm:min-h-[500px] md:h-[75vh] md:min-h-[460px] md:max-h-[75vh] bg-white overflow-hidden flex flex-col justify-between pt-5 sm:pt-7 md:pt-6 pb-3 sm:pb-3 md:pb-2.5">
       {/* ======================================================== */}
       {/* BACKGROUND IMAGE LAYER (Blurred on Mobile, Sharp Desktop) */}
       {/* Full width 100% edge-to-edge - text written directly on it */}

@@ -467,11 +467,6 @@ export default function ServicesClient() {
             <span className="text-[#102A5C] font-semibold">Services</span>
           </nav>
 
-          {/* Slogan Pill */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/90 border border-[#00A3E0]/30 text-[#00A3E0] text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-2.5 shadow-2xs">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>{BRAND_INFO.slogan}</span>
-          </div>
 
           {/* Main Title: Services */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold text-[#102A5C] tracking-tight leading-[1.15] mb-2 sm:mb-3">

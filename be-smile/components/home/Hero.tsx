@@ -54,20 +54,20 @@ export default function Hero() {
       {/* HERO CONTENT CONTAINER - Snug gap and large font style   */}
       {/* ======================================================== */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 h-full flex flex-col justify-start md:justify-between gap-3 sm:gap-4 md:gap-0 flex-1">
-        {/* Top/Middle Area: Large text on Left with clean tight gap */}
-        <div className="grid grid-cols-1 md:grid-cols-12 items-center gap-2.5 sm:gap-4 lg:gap-6 mt-1 mb-0 sm:my-auto pt-0 sm:pt-4">
+        {/* Top/Middle Area: Large text on Left with normal comfortable spacing */}
+        <div className="grid grid-cols-1 md:grid-cols-12 items-center gap-3 sm:gap-4 lg:gap-6 mt-2 mb-1 sm:my-auto pt-1 sm:pt-4">
           {/* Left Column: Hero Text Content - Full width */}
           <div className="md:col-span-7 lg:col-span-7 xl:col-span-6 flex flex-col items-start text-left w-full max-w-none">
-            {/* Eyebrow Badge - Large clear text */}
-            <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 rounded-full bg-[#F0FCFD]/95 backdrop-blur-xs border border-[#10B9C3]/30 shadow-2xs mb-1.5 sm:mb-2">
+            {/* Eyebrow Badge - Normal clear spacing */}
+            <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 rounded-full bg-[#F0FCFD]/95 backdrop-blur-xs border border-[#10B9C3]/30 shadow-2xs mb-2.5 sm:mb-3.5">
               <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#63C32D] shrink-0 animate-pulse" />
-              <span className="text-xs sm:text-xs md:text-sm font-extrabold text-[#7A43D8] tracking-wider uppercase">
+              <span className="text-xs sm:text-xs md:text-sm font-bold text-[#7A43D8] tracking-wider uppercase">
                 CHILD DEVELOPMENT &amp; REHABILITATION CENTRE
               </span>
             </div>
 
-            {/* Main Multi-color Headline - LARGE font style */}
-            <h1 className="text-[1.75rem] xs:text-[2rem] sm:text-4xl md:text-[2.35rem] lg:text-[2.85rem] xl:text-[3.25rem] font-black text-[#102A5C] tracking-tight leading-[1.12] sm:leading-[1.1] mb-2 sm:mb-2.5 drop-shadow-2xs">
+            {/* Main Multi-color Headline - Normal comfortable line & letter spacing */}
+            <h1 className="text-[1.75rem] xs:text-[2rem] sm:text-4xl md:text-[2.35rem] lg:text-[2.85rem] xl:text-[3.25rem] font-black text-[#102A5C] tracking-normal leading-[1.22] sm:leading-[1.18] mb-3 sm:mb-4 drop-shadow-2xs">
               Helping Little Minds{" "}
               <span className="text-[#10B9C3] relative inline-block">
                 Grow
@@ -89,14 +89,14 @@ export default function Hero() {
               ,{" "}
               <span className="text-[#FFAA18]">Learn</span>{" "}
               <span className="text-[#102A5C]">&amp;</span>{" "}
-              <span className="text-[#7A43D8] inline-flex items-center gap-1">
+              <span className="text-[#7A43D8] inline-flex items-center gap-1.5">
                 Shine
                 <Sparkles className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-[#FFAA18] inline fill-[#FFAA18] -mt-1 animate-bounce" />
               </span>
             </h1>
 
-            {/* Supporting Description - Large font style with snug margin */}
-            <p className="text-[14px] sm:text-base md:text-lg lg:text-[1.1rem] text-slate-800 md:text-slate-700 leading-snug sm:leading-relaxed max-w-xl mb-2.5 sm:mb-3.5 font-semibold md:font-medium">
+            {/* Supporting Description - Normal relaxed line-height and spacing */}
+            <p className="text-sm sm:text-base md:text-lg lg:text-[1.1rem] text-slate-800 md:text-slate-700 leading-relaxed max-w-xl mb-3.5 sm:mb-4.5 font-normal sm:font-medium tracking-normal">
               Child-centered developmental and rehabilitation care designed to help every child discover their potential and live a happier, brighter future.
             </p>
 

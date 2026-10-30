@@ -1,0 +1,11 @@
+{
+  "name": "be-smile-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix be-smile run dev",
+    "build": "npm --prefix be-smile run build",
+    "start": "npm --prefix be-smile run start",
+    "lint": "npm --prefix be-smile run lint"
+  }
+}

@@ -23,6 +23,8 @@ export const BRAND_INFO = {
   address: "2nd Floor Shop No. 203, Vasundhara Plaza, Opp. Baskin Robbins, DP Road, Pimple Nilakh, Pune - 411027",
   workingHours: "Monday - Saturday: 8:30 AM – 7:30 PM (Sunday: By Appointment)",
   emergencySupport: "24/7 Helpline Available for Registered Families",
+  whatsapp: "918308677051",
+  whatsappDisplay: "+91 83086 77051",
   bookingUrl: "/contact#book-assessment",
 };
 

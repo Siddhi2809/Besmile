@@ -1,16 +1,19 @@
-
-
 import React from "react";
 import Link from "next/link";
 import {
-  MessageCircleHeart,
-  HandHeart,
-  BrainCircuit,
-  Activity,
-  GraduationCap,
-  Sparkles,
   ArrowRight,
-  LucideIcon,
+  Sparkles,
+  ClipboardCheck,
+  Activity,
+  Hand,
+  Brain,
+  MessageCircle,
+  Users,
+  BookOpen,
+  HeartHandshake,
+  Compass,
+  Smile,
+  Flame,
 } from "lucide-react";
 import { ServiceItem } from "@/types";
 
@@ -19,13 +22,19 @@ interface ServiceCardProps {
   className?: string;
 }
 
-const iconMap: Record<string, LucideIcon> = {
-  MessageCircleHeart,
-  HandHeart,
-  BrainCircuit,
+const iconMap: Record<string, React.ElementType> = {
+  MessageCircleHeart: MessageCircle,
+  HandHeart: Hand,
+  BrainCircuit: Brain,
   Activity,
-  GraduationCap,
+  GraduationCap: BookOpen,
   Sparkles,
+  ClipboardCheck,
+  Users,
+  HeartHandshake,
+  Compass,
+  Smile,
+  Flame,
 };
 
 export default function ServiceCard({ service, className = "" }: ServiceCardProps) {
@@ -81,14 +90,14 @@ export default function ServiceCard({ service, className = "" }: ServiceCardProp
         )}
       </div>
 
-      {/* Learn more link */}
+      {/* Learn more link -> directly links to the new dedicated service page */}
       <div className="pt-2">
         <Link
-          href={`/services#${service.slug}`}
+          href={`/services/${service.slug}`}
           className="inline-flex items-center text-sm font-bold transition-all duration-200 group-hover:gap-2 gap-1.5"
           style={{ color: service.color }}
         >
-          <span>Learn More</span>
+          <span>Learn More &amp; Mentor Details</span>
           <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
         </Link>
       </div>

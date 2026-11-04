@@ -24,7 +24,7 @@ const servicesList: ServiceCardConfig[] = [
     tintBg: "bg-gradient-to-b from-[#F0FCFD] via-white to-white",
     tintBorder: "border-[#10B9C3]/20 hover:border-[#10B9C3]/50",
     badgeBg: "bg-[#10B9C3]/12",
-    href: "/services#speech-therapy",
+    href: "/services/speech-language-therapy",
     doodleType: "leaf",
     icon: (
       <svg className="w-8 h-8 sm:w-8.5 sm:h-8.5" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,7 +52,7 @@ const servicesList: ServiceCardConfig[] = [
     tintBg: "bg-gradient-to-b from-[#F7F3FF] via-white to-white",
     tintBorder: "border-[#7A43D8]/20 hover:border-[#7A43D8]/50",
     badgeBg: "bg-[#7A43D8]/12",
-    href: "/services#occupational-therapy",
+    href: "/services/occupational-therapy",
     doodleType: "star",
     icon: (
       <svg className="w-8 h-8 sm:w-8.5 sm:h-8.5" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -79,7 +79,7 @@ const servicesList: ServiceCardConfig[] = [
     tintBg: "bg-gradient-to-b from-[#FFF8E9] via-white to-white",
     tintBorder: "border-[#FFAA18]/25 hover:border-[#FFAA18]/55",
     badgeBg: "bg-[#FFAA18]/14",
-    href: "/services#behavioural-therapy",
+    href: "/services/behavioural-psychological-services",
     doodleType: "sun",
     icon: (
       <svg className="w-8 h-8 sm:w-8.5 sm:h-8.5" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -101,7 +101,7 @@ const servicesList: ServiceCardConfig[] = [
     tintBg: "bg-gradient-to-b from-[#F3FBF0] via-white to-white",
     tintBorder: "border-[#63C32D]/20 hover:border-[#63C32D]/50",
     badgeBg: "bg-[#63C32D]/12",
-    href: "/services#physiotherapy",
+    href: "/services/paediatric-physiotherapy",
     doodleType: "leaf",
     icon: (
       <svg className="w-8 h-8 sm:w-8.5 sm:h-8.5" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -122,7 +122,7 @@ const servicesList: ServiceCardConfig[] = [
     tintBg: "bg-gradient-to-b from-[#F0F9FF] via-white to-white",
     tintBorder: "border-[#0EA5E9]/20 hover:border-[#0EA5E9]/50",
     badgeBg: "bg-[#0EA5E9]/12",
-    href: "/services#special-education",
+    href: "/services/special-education",
     doodleType: "spark",
     icon: (
       <svg className="w-8 h-8 sm:w-8.5 sm:h-8.5" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -146,7 +146,7 @@ const servicesList: ServiceCardConfig[] = [
     tintBg: "bg-gradient-to-b from-[#F7F3FF] via-white to-white",
     tintBorder: "border-[#7A43D8]/20 hover:border-[#7A43D8]/50",
     badgeBg: "bg-[#7A43D8]/12",
-    href: "/services#early-intervention",
+    href: "/services/early-intervention-program",
     doodleType: "heart",
     icon: (
       <svg className="w-8 h-8 sm:w-8.5 sm:h-8.5" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">

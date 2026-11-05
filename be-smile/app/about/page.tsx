@@ -19,6 +19,7 @@ import {
   Building2,
 } from "lucide-react";
 import { FOUNDERS_INFO } from "@/lib/constants";
+import { WhatsAppIcon, getWhatsAppBookingUrl } from "@/components/ui/WhatsAppIcon";
 
 export const metadata = {
   title: "About Us | Be Smile Child Development & Rehabilitation Centre",
@@ -588,15 +589,17 @@ export default function AboutPage() {
             Book an assessment and take the first step towards a brighter future.
           </p>
 
-          {/* Bold Orange Action Button */}
+          {/* WhatsApp Action Button */}
           <div className="flex justify-center">
-            <Link
-              href="/contact#book-assessment"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#FFAA18] hover:bg-[#E89608] text-white font-extrabold text-sm sm:text-base shadow-lg shadow-orange-500/25 transition-all duration-300 hover:scale-105 active:scale-95"
+            <a
+              href={getWhatsAppBookingUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-extrabold text-sm sm:text-base shadow-lg shadow-[#25D366]/30 transition-all duration-300 hover:scale-105 active:scale-95"
             >
-              <span>Book an Assessment</span>
-              <ArrowRight className="w-4 h-4 stroke-[2.5]" />
-            </Link>
+              <WhatsAppIcon className="w-5 h-5 fill-white" />
+              <span>Book Assessment on WhatsApp</span>
+            </a>
           </div>
         </div>
       </section>

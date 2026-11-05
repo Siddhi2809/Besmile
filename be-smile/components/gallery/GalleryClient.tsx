@@ -11,6 +11,7 @@ import {
   ArrowRight,
   Sparkles,
 } from "lucide-react";
+import { WhatsAppIcon, getWhatsAppBookingUrl } from "@/components/ui/WhatsAppIcon";
 
 export type CategoryType =
   | "All"
@@ -445,15 +446,17 @@ export default function GalleryClient() {
                 </p>
               </div>
 
-              {/* Right Column: Orange Pill Action Button */}
+              {/* Right Column: WhatsApp Action Button */}
               <div className="shrink-0 flex items-center">
-                <Link
-                  href="/contact#book-assessment"
-                  className="inline-flex items-center gap-2 px-7 py-3 sm:px-8 sm:py-3.5 rounded-full bg-[#FFAA18] hover:bg-[#E89608] text-white font-extrabold text-xs sm:text-sm shadow-md shadow-orange-500/25 transition-all duration-300 hover:scale-105 active:scale-95"
+                <a
+                  href={getWhatsAppBookingUrl()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-7 py-3 sm:px-8 sm:py-3.5 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-extrabold text-xs sm:text-sm shadow-md shadow-[#25D366]/30 transition-all duration-300 hover:scale-105 active:scale-95"
                 >
-                  <span>Book an Assessment</span>
-                  <ArrowRight className="w-4 h-4 stroke-[2.5]" />
-                </Link>
+                  <WhatsAppIcon className="w-4 h-4 sm:w-5 sm:h-5 fill-white" />
+                  <span>Book Assessment on WhatsApp</span>
+                </a>
               </div>
             </div>
           </div>

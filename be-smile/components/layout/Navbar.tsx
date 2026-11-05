@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import { NAV_LINKS, BRAND_INFO } from "@/lib/constants";
 import Button from "@/components/ui/Button";
+import { WhatsAppIcon, getWhatsAppBookingUrl } from "@/components/ui/WhatsAppIcon";
 
 const navIcons: Record<string, React.ReactNode> = {
   "/": <Home className="w-4 h-4" />,
@@ -137,24 +138,29 @@ export default function Navbar() {
               })}
             </nav>
 
-            {/* Right Action: Book Assessment CTA (Orange on Desktop) */}
+            {/* Right Action: Book Assessment CTA (WhatsApp) */}
             <div className="hidden sm:flex items-center gap-3">
               <Button
-                variant="orange"
+                variant="whatsapp"
                 size="md"
-                href="/contact#book-assessment"
-                rightIcon={<CalendarCheck className="w-4 h-4 ml-1" />}
+                href={getWhatsAppBookingUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
+                leftIcon={<WhatsAppIcon className="w-4 h-4 fill-white mr-0.5" />}
               >
-                Book an Assessment
+                Book on WhatsApp
               </Button>
             </div>
 
             {/* Mobile Actions: Book button + Hamburger Trigger */}
             <div className="flex lg:hidden items-center gap-2">
               <Button
-                variant="orange"
+                variant="whatsapp"
                 size="sm"
-                href="/contact#book-assessment"
+                href={getWhatsAppBookingUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
+                leftIcon={<WhatsAppIcon className="w-3.5 h-3.5 fill-white" />}
                 className="text-xs px-3 py-1.5 sm:hidden font-bold"
               >
                 Book
@@ -299,14 +305,16 @@ export default function Navbar() {
         {/* Drawer Footer Actions */}
         <div className="p-4 border-t border-slate-100 bg-white space-y-2.5">
           <Button
-            variant="orange"
+            variant="whatsapp"
             size="md"
-            href="/contact#book-assessment"
+            href={getWhatsAppBookingUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setIsDrawerOpen(false)}
-            showArrow
-            className="w-full text-center justify-center font-bold shadow-md shadow-[#FFAA18]/25 py-3 text-xs sm:text-sm"
+            leftIcon={<WhatsAppIcon className="w-4 h-4 fill-white mr-1" />}
+            className="w-full text-center justify-center font-bold shadow-md shadow-[#25D366]/25 py-3 text-xs sm:text-sm"
           >
-            Book Assessment
+            Book Assessment on WhatsApp
           </Button>
 
           <a

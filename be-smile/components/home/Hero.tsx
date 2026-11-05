@@ -10,6 +10,7 @@ import {
   LucideIcon,
 } from "lucide-react";
 import Button from "@/components/ui/Button";
+import { WhatsAppIcon, getWhatsAppBookingUrl } from "@/components/ui/WhatsAppIcon";
 import { TRUST_HIGHLIGHTS } from "@/lib/constants";
 
 const iconMap: Record<string, LucideIcon> = {
@@ -103,14 +104,15 @@ export default function Hero() {
             {/* CTA Buttons - Large bold text */}
             <div className="flex flex-row items-center gap-2 sm:gap-3 w-full sm:w-auto">
               <Button
-                variant="orange"
+                variant="whatsapp"
                 size="sm"
-                href="/contact#book-assessment"
-                showArrow
-                rightIcon={<CalendarCheck className="w-4 h-4 ml-0.5" />}
-                className="flex-1 sm:flex-initial text-center shadow-md shadow-[#FFAA18]/25 hover:shadow-lg hover:shadow-[#FFAA18]/35 text-xs xs:text-sm sm:text-base font-bold px-3.5 sm:px-5 py-2.5"
+                href={getWhatsAppBookingUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
+                leftIcon={<WhatsAppIcon className="w-4 h-4 fill-white mr-1" />}
+                className="flex-1 sm:flex-initial text-center shadow-md shadow-[#25D366]/25 hover:shadow-lg hover:shadow-[#25D366]/35 text-xs xs:text-sm sm:text-base font-bold px-3.5 sm:px-5 py-2.5"
               >
-                Book Assessment
+                Book on WhatsApp
               </Button>
 
               <Button

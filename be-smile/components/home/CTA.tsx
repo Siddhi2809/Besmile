@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { WhatsAppIcon, getWhatsAppBookingUrl } from "@/components/ui/WhatsAppIcon";
 
 export default function CTA() {
   return (
@@ -55,13 +56,15 @@ export default function CTA() {
             Every little step is a step toward a brighter future.
           </p>
 
-          <Link
-            href="/contact#book-assessment"
-            className="group inline-flex items-center gap-2 px-7 py-3 sm:px-8 sm:py-3.5 rounded-full bg-[#FF8A00] hover:bg-[#E87900] text-white font-bold text-xs sm:text-sm md:text-[14px] shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95"
+          <a
+            href={getWhatsAppBookingUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 px-7 py-3 sm:px-8 sm:py-3.5 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-xs sm:text-sm md:text-[14px] shadow-md shadow-[#25D366]/30 hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95"
           >
-            <span>Book an Assessment</span>
-            <ArrowRight className="w-4 h-4 stroke-[2.5] transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
+            <WhatsAppIcon className="w-5 h-5 fill-white" />
+            <span>Book Assessment on WhatsApp</span>
+          </a>
         </div>
 
         {/* RIGHT ELEMENT: Colorful BE SMILE Leaf Cluster */}

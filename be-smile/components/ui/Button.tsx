@@ -3,9 +3,11 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "orange" | "primary" | "secondary" | "purple" | "outline" | "ghost";
+  variant?: "orange" | "primary" | "secondary" | "purple" | "outline" | "ghost" | "whatsapp";
   size?: "sm" | "md" | "lg";
   href?: string;
+  target?: string;
+  rel?: string;
   showArrow?: boolean;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
@@ -17,6 +19,8 @@ export default function Button({
   variant = "orange",
   size = "md",
   href,
+  target,
+  rel,
   showArrow = false,
   leftIcon,
   rightIcon,
@@ -46,6 +50,8 @@ export default function Button({
       "bg-white hover:bg-[#F0FCFD] text-[#10B9C3] border-2 border-[#10B9C3] hover:border-[#079BA5] focus:ring-[#10B9C3]",
     ghost:
       "bg-transparent hover:bg-slate-100 text-[#102A5C] focus:ring-slate-300 shadow-none",
+    whatsapp:
+      "bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-[#25D366]/30 hover:shadow-lg hover:shadow-[#25D366]/40 focus:ring-[#25D366]",
   };
 
   const combinedStyles = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;
@@ -63,7 +69,7 @@ export default function Button({
 
   if (href) {
     return (
-      <Link href={href} className={`group ${combinedStyles}`}>
+      <Link href={href} target={target} rel={rel} className={`group ${combinedStyles}`}>
         {content}
       </Link>
     );

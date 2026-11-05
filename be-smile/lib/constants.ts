@@ -25,7 +25,8 @@ export const BRAND_INFO = {
   emergencySupport: "24/7 Helpline Available for Registered Families",
   whatsapp: "918308677051",
   whatsappDisplay: "+91 83086 77051",
-  bookingUrl: "/contact#book-assessment",
+  whatsappUrl: "https://wa.me/918308677051?text=Hello%20Be%20Smile%2C%20I%20would%20like%20to%20book%20an%20assessment%20for%20my%20child.",
+  bookingUrl: "https://wa.me/918308677051?text=Hello%20Be%20Smile%2C%20I%20would%20like%20to%20book%20an%20assessment%20for%20my%20child.",
 };
 
 export const FOUNDERS_INFO = [

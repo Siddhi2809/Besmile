@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { BRAND_INFO } from "@/lib/constants";
 import { DetailedService } from "@/lib/services-data";
+import { WhatsAppIcon, getWhatsAppBookingUrl } from "@/components/ui/WhatsAppIcon";
 
 interface ServiceDetailClientProps {
   service: DetailedService;
@@ -138,17 +139,15 @@ export default function ServiceDetailClient({
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
-                <Link
-                  href="/contact#book-assessment"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full font-bold text-white text-sm shadow-md transition-all hover:scale-105 active:scale-95"
-                  style={{
-                    backgroundColor: service.accentColor,
-                    boxShadow: `0 8px 24px -4px ${service.accentColor}50`,
-                  }}
+                <a
+                  href={getWhatsAppBookingUrl(service.title)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full font-bold text-white text-sm shadow-md transition-all hover:scale-105 active:scale-95 bg-[#25D366] hover:bg-[#20bd5a] shadow-[#25D366]/30"
                 >
-                  <CalendarCheck className="w-4 h-4" />
-                  <span>Book Initial Assessment</span>
-                </Link>
+                  <WhatsAppIcon className="w-5 h-5 fill-white" />
+                  <span>Book Assessment on WhatsApp</span>
+                </a>
 
                 <a
                   href={`tel:${BRAND_INFO.phone}`}
@@ -293,12 +292,15 @@ export default function ServiceDetailClient({
                 <p className="text-xs text-[#00A3E0] font-bold">
                   Unsure about developmental signs? Schedule a screening.
                 </p>
-                <Link
-                  href="/contact#book-assessment"
-                  className="text-xs font-extrabold text-[#102A5C] hover:underline"
+                <a
+                  href={getWhatsAppBookingUrl(service.title)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-extrabold text-[#102A5C] hover:text-[#25D366] inline-flex items-center gap-1.5 transition-colors"
                 >
-                  Book Assessment &rarr;
-                </Link>
+                  <WhatsAppIcon className="w-3.5 h-3.5 fill-[#25D366]" />
+                  <span>Book via WhatsApp &rarr;</span>
+                </a>
               </div>
             </div>
           </div>
@@ -414,13 +416,15 @@ export default function ServiceDetailClient({
                   </p>
 
                   <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 pt-2 border-t border-slate-100">
-                    <Link
-                      href="/contact#book-assessment"
-                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#102A5C] hover:bg-[#00A3E0] text-white text-xs font-bold transition-all shadow-xs"
+                    <a
+                      href={getWhatsAppBookingUrl(`${service.title} with ${mentor.name}`)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-bold transition-all shadow-xs"
                     >
-                      <CalendarCheck className="w-3.5 h-3.5" />
-                      <span>Consult with {mentor.name.split(" ")[0]}</span>
-                    </Link>
+                      <WhatsAppIcon className="w-3.5 h-3.5 fill-white" />
+                      <span>Consult {mentor.name.split(" ")[0]} on WhatsApp</span>
+                    </a>
 
                     {mentor.phone && (
                       <a
@@ -706,13 +710,15 @@ export default function ServiceDetailClient({
                 <span>Call {BRAND_INFO.phone}</span>
               </a>
 
-              <Link
-                href="/contact#book-assessment"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#FFAA18] hover:bg-[#E89608] text-white font-extrabold text-xs sm:text-sm shadow-md shadow-orange-500/25 transition-all hover:scale-105 active:scale-95"
+              <a
+                href={getWhatsAppBookingUrl(service.title)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-extrabold text-xs sm:text-sm shadow-md shadow-[#25D366]/30 transition-all hover:scale-105 active:scale-95"
               >
-                <span>Book Assessment Now</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+                <WhatsAppIcon className="w-5 h-5 fill-white" />
+                <span>Book Assessment on WhatsApp</span>
+              </a>
             </div>
           </div>
         </div>
